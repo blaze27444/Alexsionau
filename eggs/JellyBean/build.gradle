@@ -1,0 +1,8 @@
+plugins {
+    id("easter.eggs.library")
+}
+
+android {
+    namespace = "com.android_j.egg"
+    resourcePrefix = "j_"
+}

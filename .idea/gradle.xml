@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/build-logic" name="build-logic">
+                <projects>
+                  <project path="$PROJECT_DIR$/build-logic" />
+                  <project path="$PROJECT_DIR$/build-logic/convention" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/basic" />
+            <option value="$PROJECT_DIR$/build-logic" />
+            <option value="$PROJECT_DIR$/build-logic/convention" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/activity-actions" />
+            <option value="$PROJECT_DIR$/core/alterable-adaptive-icon" />
+            <option value="$PROJECT_DIR$/core/custom-tab-browser" />
+            <option value="$PROJECT_DIR$/core/icons" />
+            <option value="$PROJECT_DIR$/core/local-provider" />
+            <option value="$PROJECT_DIR$/core/navigation" />
+            <option value="$PROJECT_DIR$/core/resources" />
+            <option value="$PROJECT_DIR$/core/settings" />
+            <option value="$PROJECT_DIR$/core/shortcut" />
+            <option value="$PROJECT_DIR$/core/theme" />
+            <option value="$PROJECT_DIR$/eggs" />
+            <option value="$PROJECT_DIR$/eggs/AndroidNext" />
+            <option value="$PROJECT_DIR$/eggs/Baklava" />
+            <option value="$PROJECT_DIR$/eggs/Base" />
+            <option value="$PROJECT_DIR$/eggs/Gingerbread" />
+            <option value="$PROJECT_DIR$/eggs/Honeycomb" />
+            <option value="$PROJECT_DIR$/eggs/IceCreamSandwich" />
+            <option value="$PROJECT_DIR$/eggs/JellyBean" />
+            <option value="$PROJECT_DIR$/eggs/KitKat" />
+            <option value="$PROJECT_DIR$/eggs/Lollipop" />
+            <option value="$PROJECT_DIR$/eggs/Marshmallow" />
+            <option value="$PROJECT_DIR$/eggs/Nougat" />
+            <option value="$PROJECT_DIR$/eggs/Oreo" />
+            <option value="$PROJECT_DIR$/eggs/Pie" />
+            <option value="$PROJECT_DIR$/eggs/Q" />
+            <option value="$PROJECT_DIR$/eggs/R" />
+            <option value="$PROJECT_DIR$/eggs/RocketLauncher" />
+            <option value="$PROJECT_DIR$/eggs/S" />
+            <option value="$PROJECT_DIR$/eggs/Tiramisu" />
+            <option value="$PROJECT_DIR$/eggs/UpsideDownCake" />
+            <option value="$PROJECT_DIR$/eggs/VanillaIceCream" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/cat-editor" />
+            <option value="$PROJECT_DIR$/feature/crash" />
+            <option value="$PROJECT_DIR$/feature/embedding-splits" />
+            <option value="$PROJECT_DIR$/feature/widget" />
+            <option value="$PROJECT_DIR$/jvm-basic" />
+            <option value="$PROJECT_DIR$/script" />
+            <option value="$PROJECT_DIR$/script/compose-material-icons-generator" />
+            <option value="$PROJECT_DIR$/script/emoji-svg-xml-convertor" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+    <option name="parallelModelFetch" value="true" />
+  </component>
+</project>

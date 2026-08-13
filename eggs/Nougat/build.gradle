@@ -1,0 +1,14 @@
+plugins {
+    id("easter.eggs.library")
+}
+
+android {
+	namespace = "com.android_n.egg"
+	resourcePrefix = "n_"
+}
+
+dependencies {
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.dynamicanimation)
+    implementation(libs.androidx.annotation)
+}
