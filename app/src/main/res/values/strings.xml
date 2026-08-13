@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Easter Eggs</string>
+
+    <string name="url_github" translatable="false">https://github.com/hushenghao/AndroidEasterEggs</string>
+    <string name="url_github_commit" translatable="false">https://github.com/hushenghao/AndroidEasterEggs/commit/%s</string>
+    <string name="url_github_issues" translatable="false">https://github.com/hushenghao/AndroidEasterEggs/issues</string>
+    <string name="url_beta" translatable="false">https://github.com/hushenghao/AndroidEasterEggs/releases</string>
+    <string name="url_privacy" translatable="false">https://github.com/hushenghao/AndroidEasterEggs/wiki/Privacy-policy</string>
+    <string name="url_wiki" translatable="false">https://github.com/hushenghao/AndroidEasterEggs/wiki</string>
+    <string name="url_license" translatable="false">https://www.apache.org/licenses/LICENSE-2.0.txt</string>
+    <string name="url_translation" translatable="false">https://crowdin.com/project/easter-eggs</string>
+    <string name="label_mail_me" translatable="false">dede.hu@qq.com</string>
+    <string name="url_sponsor" translatable="false">https://github.com/hushenghao/AndroidEasterEggs/wiki/Sponsor</string>
+    <string name="url_telegram_group" translatable="false">https://t.me/+AD_rLq66XERkMDNl</string>
+
+    <string name="label_version" translatable="false">v%s (%d)</string>
+    <string name="toast_no_egg" translatable="false">🤖🚫🥚</string>
+
+    <string name="android_version_nickname_format" translatable="false">Android %s (%s)</string>
+    <string name="android_version_format" translatable="false">Android %s</string>
+    <string name="api_version_format" translatable="false">API %s</string>
+
+</resources>

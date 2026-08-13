@@ -1,0 +1,13 @@
+plugins {
+    id("easter.eggs.library")
+}
+
+android {
+    namespace = "com.android_s.egg"
+    resourcePrefix = "s_"
+}
+
+dependencies {
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.recyclerview)
+}

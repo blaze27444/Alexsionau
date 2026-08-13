@@ -1,0 +1,13 @@
+plugins {
+    id("easter.eggs.library")
+}
+
+android {
+	namespace = "com.android_o.egg"
+	resourcePrefix = "o_"
+}
+
+dependencies {
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.dynamicanimation)
+}

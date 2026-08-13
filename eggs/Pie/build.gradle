@@ -1,0 +1,12 @@
+plugins {
+    id("easter.eggs.library")
+}
+
+android {
+	namespace = "com.android_p.egg"
+	resourcePrefix = "p_"
+}
+
+dependencies {
+    implementation(libs.androidx.appcompat)
+}

@@ -1,0 +1,85 @@
+name: Build Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  github-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: gradle
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Retrieve the secret and decode it to a file
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEY_PROPERTIES_BASE64: ${{ secrets.KEY_PROPERTIES_BASE64 }}
+        run: |
+          echo "$KEY_PROPERTIES_BASE64" | base64 --decode > key.properties
+          echo "$KEYSTORE_BASE64" | base64 --decode > keystore.jks
+
+      - name: Build Release with Fastlane
+        env:
+          TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bundle install
+          bundle exec fastlane install_plugins
+          bundle exec fastlane release ref_name:${{ github.ref_name }}
+
+  play-store:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: gradle
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Retrieve the secret and decode it to a file
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEY_PROPERTIES_BASE64: ${{ secrets.KEY_PROPERTIES_BASE64 }}
+          JSON_KEY_FILE_BASE64: ${{ secrets.JSON_KEY_FILE_BASE64 }}
+        run: |
+          echo "$KEY_PROPERTIES_BASE64" | base64 --decode > key.properties
+          echo "$KEYSTORE_BASE64" | base64 --decode > keystore.jks
+          echo "$JSON_KEY_FILE_BASE64" | base64 --decode > json_key_file.json
+
+      - name: Deploy to the Google Play
+        env:
+          JSON_KEY_FILE: 'json_key_file.json'
+          JSON_KEY_FILE_BASE64: ${{ secrets.JSON_KEY_FILE_BASE64 }}
+        if: ${{ env.JSON_KEY_FILE_BASE64 != '' }}
+        run: |
+          bundle install
+          bundle exec fastlane install_plugins
+          bundle exec fastlane deploy ref_name:${{ github.ref_name }}
